@@ -98,6 +98,8 @@ Questions, feedback or support: [ar-ay06@hotmail.com](mailto:ar-ay06@hotmail.com
 3. Dosyaları `main` dalına yükle. Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save. / Upload the files to `main` and enable Pages from the branch root.
 4. Yukarıdaki üç URL’yi oturum açmadan kontrol et; iki dilde bağlantıları, e-postayı ve ekran görüntüsünü aç. App Store Connect’e bu URL’leri gir. / Open all three URLs signed out, check both languages, links, email and screenshot, then enter the URLs in App Store Connect.
 
+Stil dosyası veya ikonlar değişince HTML’lerdeki `?v=` değerini artır (Pages dosyaları 10 dk önbelleğe aldırır). / When the stylesheet or icons change, bump the `?v=` value in the HTML files (Pages caches files for 10 minutes).
+
 Depo oluşturma, push ve Pages yayını bu görevde yapılmadı; URL’ler yayın sonrası kullanılacak adreslerdir. / Repository creation, push and Pages deployment were not performed; these are the intended published URLs.
 
 ---
