@@ -1,21 +1,29 @@
 /* Lesson Tracker site: plain, offline-friendly, no external fonts, scripts or trackers. */
 :root {
-  --bg: #fbf4e6;
-  --card: #fffaf0;
-  --ink: #2e2118;
-  --muted: #6b5a4b;
-  --line: #e2d3b8;
-  --accent: #8a4b1f;
+  /* AppTheme light surfaces / onPrimaryContainer; AppColors.light brand / cancelled.fg. */
+  --bg: #f8f6f1;
+  --card: #ffffff;
+  --ink: #03403c;
+  --muted: #5b6675;
+  --line: #e3dfd4;
+  --accent: #0a736d;
+  --accent-soft: #d5f1ed;
+  --focus: #0a7f79;
+  --heading-font: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1f1812;
-    --card: #2a2119;
-    --ink: #f3e8d6;
-    --muted: #c2b098;
-    --line: #4a3b2c;
-    --accent: #e8b26a;
+    /* AppTheme dark surfaces / onPrimaryContainer; AppColors.dark brand / cancelled.fg. */
+    --bg: #0a1211;
+    --card: #131f1e;
+    --ink: #bdf3ec;
+    --muted: #b9c3d0;
+    --line: #2d403e;
+    --accent: #6fe0d3;
+    --accent-soft: #12403d;
+    --focus: #4fd6c8;
   }
 }
 * { box-sizing: border-box; }
@@ -26,42 +34,106 @@ body {
   color: var(--ink);
   font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: anywhere;
 }
 main {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 24px 16px 48px;
 }
 header.site { margin-bottom: 8px; }
 header.site .brand {
-  font: 700 28px/1.2 Georgia, "Times New Roman", serif;
-  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  font: 800 28px/1.2 var(--heading-font);
+  letter-spacing: -0.6px;
   text-decoration: none;
+  border-radius: 12px;
+}
+.brand-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 12px;
 }
 nav.langs, nav.pages {
-  margin: 6px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+  margin: 8px 0 0;
   font-size: 15px;
   color: var(--muted);
 }
-nav a { margin-right: 14px; }
-a { color: var(--accent); }
-a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px;
+  border-radius: 10px;
+}
+nav a[aria-current="page"] {
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
 section.lang {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 8px 20px 20px;
   margin-top: 24px;
+  scroll-margin-top: 16px;
 }
-h1 { font: 700 26px/1.25 Georgia, "Times New Roman", serif; margin: 16px 0 4px; }
-h2 { font-size: 19px; margin: 24px 0 4px; }
+h1 {
+  font: 800 26px/1.25 var(--heading-font);
+  letter-spacing: -0.6px;
+  margin: 16px 0 4px;
+}
+h2 {
+  font: 700 19px/1.4 var(--heading-font);
+  letter-spacing: -0.2px;
+  margin: 24px 0 4px;
+}
 p, ul { margin: 8px 0; }
 ul { padding-left: 22px; }
 li { margin: 4px 0; }
 .meta { color: var(--muted); font-size: 15px; }
-details { border-top: 1px solid var(--line); padding: 10px 0; }
+details { border-top: 1px solid var(--line); padding: 8px 0; }
 details:first-of-type { margin-top: 8px; }
-summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
-footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
-
-.screenshot { display: block; max-width: 100%; height: auto; margin: 16px auto; border-radius: 18px; }
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 8px 4px;
+  border-radius: 8px;
+}
+summary::marker { color: var(--accent); }
+summary:hover, details[open] > summary { background: var(--accent-soft); }
+details > p { margin: 8px 4px; }
+footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+.screenshot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
