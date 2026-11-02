@@ -64,4 +64,4 @@ details:first-of-type { margin-top: 8px; }
 summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
 footer { margin-top: 32px; color: var(--muted); font-size: 14px; }
 
-.screenshot { display: block; max-width: 100%; height: auto; margin: 16px auto; }
+.screenshot { display: block; max-width: 100%; height: auto; margin: 16px auto; border-radius: 18px; }

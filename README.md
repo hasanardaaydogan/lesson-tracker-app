@@ -7,7 +7,7 @@
 
 [Türkçe](#türkçe) · [English](#english)
 
-<img src="ekran-goruntusu.png" alt="Lesson Tracker ana ekranı / Home screen" width="260">
+<img src="ekran-goruntusu.png" alt="Lesson Tracker Bugün ekranı / Today screen" width="260">
 
 </div>
 
@@ -15,7 +15,7 @@
 
 ## Türkçe
 
-**Lesson Tracker**, özel ders veren öğretmenler için sade bir düzenleyici. Hesap yok, giriş yok, reklam yok. iPhone’da dikey kullanım için hazırlanmıştır.
+**Lesson Tracker**, özel ders veren öğretmenler için sade bir düzenleyici. App Store’daki adı “Lesson Tracker: Ders Ajandası”. Hesap yok, giriş yok, reklam yok. iPhone’da dikey kullanım için hazırlanmıştır.
 
 ### Özellikler
 
@@ -54,7 +54,7 @@ Soru, geri bildirim ya da destek için: [ar-ay06@hotmail.com](mailto:ar-ay06@hot
 
 ## English
 
-**Lesson Tracker** is a simple organizer for private tutors. No account, no sign-in, no ads. Built for portrait use on iPhone.
+**Lesson Tracker** is a simple organizer for private tutors. Its App Store name is “Lesson Tracker: Tutor Agenda”. No account, no sign-in, no ads. Built for portrait use on iPhone.
 
 ### Features
 
@@ -94,7 +94,7 @@ Questions, feedback or support: [ar-ay06@hotmail.com](mailto:ar-ay06@hotmail.com
 ## Yayınlama / Publishing
 
 1. GitHub’da ayrı, herkese açık `hasanardaaydogan/lesson-tracker-app` deposunu oluştur. Bu klasördeki dosyaları deponun köküne kopyala; uygulama kaynaklarını kopyalama. / Create the separate public repository and copy this folder's contents to its root; do not copy app source code.
-2. `store/ios/iphone-6.9/tr/01-*.png` dosyasını **`ekran-goruntusu.png`** adıyla site köküne kopyala. Bu görüntü yer tutucudur; bu görevde kopyalanmadı. / Copy that screenshot to the site root as **`ekran-goruntusu.png`**. It is a placeholder reference and has not been copied in this task.
+2. `ekran-goruntusu.png` (TR) ve `ekran-goruntusu-en.png` (EN), `store/ios/pazarlama/iphone-6.3/{tr,en}/01-bugun.png` görsellerinin 520 px genişliğe küçültülmüş hâlleridir; site köküne birlikte kopyalanır. / The two screenshots are 520 px wide downscaled copies of the store images `01-bugun.png` (tr/en); copy them to the site root with the pages.
 3. Dosyaları `main` dalına yükle. Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save. / Upload the files to `main` and enable Pages from the branch root.
 4. Yukarıdaki üç URL’yi oturum açmadan kontrol et; iki dilde bağlantıları, e-postayı ve ekran görüntüsünü aç. App Store Connect’e bu URL’leri gir. / Open all three URLs signed out, check both languages, links, email and screenshot, then enter the URLs in App Store Connect.
 
