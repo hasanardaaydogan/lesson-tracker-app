@@ -1,11 +1,11 @@
 /* Lesson Tracker site: plain, offline-friendly, no external fonts, scripts or trackers. */
 :root {
   /* AppTheme light surfaces / onPrimaryContainer; AppColors.light brand / cancelled.fg. */
-  --bg: #f8f6f1;
+  --bg: #eaf6f4;
   --card: #ffffff;
   --ink: #03403c;
   --muted: #5b6675;
-  --line: #e3dfd4;
+  --line: #cddfdb;
   --accent: #0a736d;
   --accent-soft: #d5f1ed;
   --focus: #0a7f79;
